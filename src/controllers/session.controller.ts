@@ -5,7 +5,7 @@ class SessionController {
   async create(req: Request, res: Response) {
     const { email, password } = req.body;
     const sessionCreated = await sessionService.create({ email, password });
-    return res.json(sessionController);
+    return res.json(sessionCreated);
   }
 }
 
